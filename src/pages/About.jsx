@@ -49,7 +49,7 @@ const skills = [
   { name: 'HTML/CSS', level: 95 },
   { name: 'JavaScript', level: 90 },
   { name: 'React', level: 90 },
-  { name: 'Next.js', level: 85 },
+  { name: 'Vue.js', level: 85 },
   { name: 'UI/UX', level: 80 },
 ]
 

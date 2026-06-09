@@ -29,9 +29,11 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.left}>
           <NavLink to="/" className={styles.logo}>
-            Bayu Rizky Prayinusa<span className={styles.dot}>.dev</span>
+            Bayu Rizky Prayinusa
+            <span className={styles.dot}>.dev</span>
           </NavLink>
           <p className={styles.tagline}>Building websites that make an impact.</p>
+          <p className={styles.tagline}>© {year} Bayu Rizky Prayinusa. All rights reserved</p>
         </div>
 
         {/* <nav className={styles.nav}>
@@ -42,10 +44,10 @@ export default function Footer() {
         </nav> */}
 
         <div className={styles.socials}>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className={styles.social} aria-label="GitHub">
+          <a href="https://github.com/BayuRizkyP" target="_blank" rel="noreferrer" className={styles.social} aria-label="GitHub">
             <GithubIcon />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className={styles.social} aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/bayurizkyprayinusa/" target="_blank" rel="noreferrer" className={styles.social} aria-label="LinkedIn">
             <LinkedinIcon />
           </a>
           <a href="mailto: bayurizkyprayinusa@gmail.com" className={styles.social} aria-label="Email">
@@ -54,15 +56,15 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.bottom}>
-        <p>© {year} Bayu Rizky Prayinusa.dev. All rights reserved.</p>
-        <nav className={styles.bottomNav}>
+      {/* <div className={styles.bottom}> */}
+        {/* <p>© {year} Bayu Rizky Prayinusa.dev. All rights reserved.</p> */}
+        {/* <nav className={styles.bottomNav}>
           <NavLink to="/" className={styles.link}>Home</NavLink>
           <NavLink to="/about" className={styles.link}>About</NavLink>
           <NavLink to="/projects" className={styles.link}>My Projects</NavLink>
           <NavLink to="/contact" className={styles.link}>Contact</NavLink>
-        </nav>
-      </div>
+        </nav> */}
+      {/* </div> */}
     </footer>
   )
 }

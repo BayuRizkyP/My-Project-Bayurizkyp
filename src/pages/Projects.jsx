@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import styles from './Projects.module.css'
+import linkPacificImg from '../assets/imagelinkpasific.png'
+import DimcargoImg from '../assets/imagedimcargo.png'
+import PbsiImg from '../assets/imagepbsi.png'
 
 const projects = [
   {
@@ -17,6 +20,8 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB'],
     category: 'E-Commerce',
     color: '#10b981',
+    images:linkPacificImg,
+    url: 'https://linkpasipik.com/'
   },
   {
     id: 3,
@@ -28,11 +33,23 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Landing Page SaaS',
+    title: 'PBSI',
     desc: 'Landing page modern untuk produk SaaS dengan animasi halus dan CTA optimal.',
-    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
+    tags: ['Laravel', 'Figma', 'Tailwind CSS'],
     category: 'Landing Page',
     color: '#f59e0b',
+    images:PbsiImg,
+    url: 'https://sadmin.sequre.id/'
+  },
+  {
+    id: 5,
+    title: 'Dimcargo',
+    desc: 'Landing page untuk perusahaan logistik dengan fitur tracking dan informasi layanan.',
+    tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+    category: 'Landing Page',
+    color: '#10b981',
+    images:DimcargoImg,
+    url: 'https://dim-cargo.co.id/' 
   },
   {
     id: 5,
@@ -84,9 +101,17 @@ export default function Projects() {
           {filtered.map(project => (
             <div key={project.id} className={styles.card}>
               <div className={styles.cardThumb} style={{ '--card-color': project.color }}>
-                <div className={styles.thumbInner}>
-                  <span className={styles.thumbLabel}>{project.title[0]}</span>
-                </div>
+                {project.images ? (
+                  <img
+                    src={project.images}
+                    alt={project.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                  />
+                ) : (
+                  <div className={styles.thumbInner}>
+                    <span className={styles.thumbLabel}>{project.title[0]}</span>
+                  </div>
+                )}
               </div>
               <div className={styles.cardBody}>
                 <h3 className={styles.cardTitle}>{project.title}</h3>
@@ -96,7 +121,11 @@ export default function Projects() {
                     <span key={tag} className={styles.tag}>{tag}</span>
                   ))}
                 </div>
-                <a href="#" className={styles.cardLink}>
+                <a href={project.url || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.cardLink}
+                >
                   View Project →
                 </a>
               </div>
