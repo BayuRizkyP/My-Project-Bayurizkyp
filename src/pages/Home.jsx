@@ -78,14 +78,26 @@ export default function Home() {
             I'm a web developer who creates modern, responsive,<br />
             and user-friendly websites.
           </p>
-          <div className={styles.actions}>
-            <Link to="/projects" className={styles.btnPrimary}>
-              View My Projects →
-            </Link>
-            <Link to="/contact" className={styles.btnSecondary}>
-              Contact Me
-            </Link>
-          </div>
+
+          
+         <div className={styles.actions}>
+          <Link to="/projects" className={styles.btnPrimary}>
+            View My Projects →
+          </Link>
+
+          <Link to="/contact" className={styles.btnSecondary}>
+            Contact Me
+          </Link>
+
+          <a
+            href="/cv.pdf"
+            download="Resume_Bayu_Rizky_Prayinusa.pdf"
+            className={styles.btnSecondary}
+          >
+            Download CV
+          </a>
+        </div>
+          
           <div className={styles.socials}>
             <a href="https://github.com/BayuRizkyP" target="_blank" rel="noreferrer" className={styles.socialBtn} aria-label="GitHub"><GithubIcon /></a>
             <a href="https://www.linkedin.com/in/bayurizkyprayinusa/" target="_blank" rel="noreferrer" className={styles.socialBtn} aria-label="LinkedIn"><LinkedinIcon /></a>
