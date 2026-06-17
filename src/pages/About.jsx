@@ -2,7 +2,7 @@ import styles from './About.module.css'
 
 const stats = [
   {
-    value: '2+',
+    value: '3+',
     label: 'Years Experience',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -23,7 +23,7 @@ const stats = [
     ),
   },
   {
-    value: '10+',
+    value: '7+',
     label: 'Happy Clients',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -51,6 +51,10 @@ const skills = [
   { name: 'React', level: 90 },
   { name: 'Vue.js', level: 85 },
   { name: 'UI/UX', level: 80 },
+  { name: 'MySQL', level: 90 },
+  { name: 'PHP', level: 85 },
+  { name: 'CodeIgniter', level: 80 },
+  { name: 'Vibe Coding', level: 75 },
 ]
 
 export default function About() {
@@ -66,7 +70,7 @@ export default function About() {
             <div className={styles.titleLine} />
             <p className={styles.desc}>
               I'm a passionate web developer with experience in building
-              modern web applications using JavaScript, React, Next.js,
+              modern web applications using JavaScript, React, Vue.js,Php,CodeIgniter, MySQL, and more. I enjoy creating user-friendly interfaces and writing clean, efficient code. My goal is to continuously learn and improve my skills to deliver high-quality solutions.
               and more.
             </p>
             <p className={styles.desc}>
@@ -79,11 +83,11 @@ export default function About() {
             </p>
           </div>
           <div className={styles.photoSide}>
-            <img
+            {/* <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop&crop=face"
               alt="Profile"
               className={styles.photo}
-            />
+            /> */}
           </div>
         </div>
 

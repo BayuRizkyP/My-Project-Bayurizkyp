@@ -60,7 +60,7 @@ export default function Contact() {
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.36 6.36l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 </span>
-                <span>+62 812-3456-7890</span>
+                <span>+62 896-3783-7726</span>
               </li>
               <li>
                 <span className={styles.contactIcon}>
@@ -69,7 +69,7 @@ export default function Contact() {
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </span>
-                <span>Jakarta, Indonesia</span>
+                <span>Bekasi, Indonesia</span>
               </li>
               <li>
                 <span className={styles.contactIcon}>
@@ -83,8 +83,8 @@ export default function Contact() {
             </ul>
 
             <div className={styles.socials}>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className={styles.social} aria-label="GitHub"><GithubIcon /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className={styles.social} aria-label="LinkedIn"><LinkedinIcon /></a>
+              <a href="https://github.com/BayuRizkyP" target="_blank" rel="noreferrer" className={styles.social} aria-label="GitHub"><GithubIcon /></a>
+              <a href="https://www.linkedin.com/in/bayurizkyprayinusa/" target="_blank" rel="noreferrer" className={styles.social} aria-label="LinkedIn"><LinkedinIcon /></a>
               <a href="mailto: bayurizkyprayinusa@gmail.com" className={styles.social} aria-label="Email"><MailIcon /></a>
             </div>
           </div>

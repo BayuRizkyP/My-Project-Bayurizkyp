@@ -11,6 +11,7 @@
   padding: 4rem 2rem 5rem;
 }
 
+/* ── Header ── */
 .header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -49,7 +50,7 @@
   margin-top: 0.5rem;
 }
 
-/* Filters */
+/* ── Filters ── */
 .filters {
   display: flex;
   justify-content: center;
@@ -66,7 +67,8 @@
   border: 1px solid #e2e8f0;
   background: white;
   color: #64748b;
-  transition: all 0.15s;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
 .filter:hover {
@@ -80,32 +82,85 @@
   border-color: var(--blue);
 }
 
-/* Grid */
+.filterActive:hover {
+  color: white;
+}
+
+/* ── Grid ── */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
+/* ── Card — scroll reveal (hidden by default) ── */
 .card {
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid #e2e8f0;
   background: white;
   overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
+/* triggered by IntersectionObserver */
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hover — subtle Apple-style lift */
 .card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  transform: translateY(-3px);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+  transform: translateY(-4px);
 }
 
+.cardVisible:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Thumbnail ── */
 .cardThumb {
-  height: 160px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--card-color) 20%, #f8fafc), color-mix(in srgb, var(--card-color) 8%, #f1f5f9));
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--card-color) 20%, #f8fafc),
+    color-mix(in srgb, var(--card-color) 8%, #f1f5f9)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* when image exists, override bg */
+.cardThumb:has(img) {
+  background: #f8fafc;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .thumbImg {
+  transform: scale(1.04);
 }
 
 .thumbInner {
@@ -126,8 +181,19 @@
   color: white;
 }
 
+/* ── Card Body ── */
 .cardBody {
   padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.categoryBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .cardTitle {
@@ -136,6 +202,7 @@
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 .cardDesc {
@@ -145,6 +212,7 @@
   margin-bottom: 1rem;
 }
 
+/* ── Tags ── */
 .cardTags {
   display: flex;
   flex-wrap: wrap;
@@ -161,20 +229,38 @@
   border: 1px solid #e2e8f0;
 }
 
+/* ── Link ── */
 .cardLink {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--blue);
-  transition: gap 0.2s;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
+  transition: gap 0.2s ease, color 0.15s ease;
 }
 
 .cardLink:hover {
   color: #2563eb;
+  gap: 0.55rem;
 }
 
+.linkArrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.cardLink:hover .linkArrow {
+  transform: translateX(3px);
+}
+
+.comingSoon {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* ── Load More ── */
 .center {
   text-align: center;
   margin-top: 3rem;
@@ -188,7 +274,8 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: #0f172a;
-  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .loadMore:hover {
@@ -196,6 +283,7 @@
   border-color: #cbd5e1;
 }
 
+/* ── Responsive ── */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
