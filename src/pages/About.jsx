@@ -1,4 +1,6 @@
 import styles from './About.module.css'
+import poto from '../assets/poto.png'
+import poto2 from '../assets/poto2.png'
 
 const stats = [
   {
@@ -88,6 +90,7 @@ export default function About() {
               alt="Profile"
               className={styles.photo}
             /> */}
+            <img src={poto} alt="Profile" className={styles.photo} />
           </div>
         </div>
 
@@ -103,7 +106,6 @@ export default function About() {
             </div>
           ))}
         </div>
-
         {/* Skills */}
         <div className={styles.skillsSection}>
           <p className={styles.skillsLabel}>SKILLS</p>
