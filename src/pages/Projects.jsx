@@ -9,6 +9,7 @@ import AhmoilSpartImg from '../assets/imageahmoilsparepart.png'
 import CbmImg from '../assets/imagecbmdashboard.png'
 import SequreImg from '../assets/imagesequre.png'
 import WmsImg from '../assets/imagewms.png'
+import poto2 from '../assets/poto2.png'
 
 const projects = [
   // {
@@ -38,7 +39,7 @@ const projects = [
     category: 'E-Commerce',
     color: '#f59e0b',
     images: PbsiImg,
-    url: 'https://sadmin.sequre.id/'
+    url: 'https://pbsi.sequre.id'
   },
   {
     id: 4,
@@ -58,7 +59,7 @@ const projects = [
     category: 'Dashboard',
     color: '#6366f1',
     images: CbmImg,
-    url: 'https://sahm-cbm.qtrust.id/highlight'
+    url: 'https://hso-cms.qtrust.id'
   },
   {
     id: 6,
@@ -68,7 +69,7 @@ const projects = [
     category: 'Dashboard',
     color: '#0ea5e9',
     images: AdmincbmImg,
-    url: 'https://scbm-admin.qtrust.id/highlight'
+    url: 'https://cbm-admin.qtrust.id'
   },
   {
     id: 7,
@@ -88,7 +89,7 @@ const projects = [
     category: 'Dashboard',
     color: '#7c3aed',
     images: AdminsequreImg,
-    url: 'https://sadmin.sequre.id/login'
+    url: 'https://admin.sequre.id/login'
   },
   {
     id: 9,
@@ -205,12 +206,27 @@ export default function Projects() {
   return (
     <div className={styles.page}>
       <div className={styles.inner}>
-
-        <div className={styles.header}>
-          <p className={styles.eyebrow}>MY WORK</p>
-          <h1 className={styles.title}>My Projects</h1>
-          <p className={styles.sub}>Here are some of the projects I've worked on.</p>
-        </div>
+        <div className={styles.hero}>
+          <div className={styles.heroLeft}>
+            <p className={styles.heroEyebrow}>👋 WELCOME TO MY PROJECT</p>
+            <h2 className={styles.heroTitle}>
+              Turning Ideas Into <span className={styles.heroAccent}>Real Products</span>
+            </h2>
+            <p className={styles.heroDesc}>
+              I've built <strong>10+ projects</strong> ranging from company profiles, 
+              dashboards, e-commerce, to warehouse systems — each crafted with clean code 
+              and attention to detail.
+            </p>
+            <div className={styles.heroBadges}>
+              <span className={styles.badge}>⚡ Fast Delivery</span>
+              <span className={styles.badge}>🎯 Detail Oriented</span>
+              <span className={styles.badge}>🤝 Team Player</span>
+            </div>
+          </div>
+          <div className={styles.heroRight}>
+            <img src={poto2} alt="Profile" className={styles.heroPhoto} />
+          </div>
+      </div>
 
         <div className={styles.filters}>
           {categories.map(cat => (

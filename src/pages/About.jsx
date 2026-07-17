@@ -16,7 +16,7 @@ const stats = [
     ),
   },
   {
-    value: '15+',
+    value: '10+',
     label: 'Projects Completed',
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -70,20 +70,20 @@ export default function About() {
             <p className={styles.eyebrow}>GET TO KNOW ME</p>
             <h1 className={styles.title}>About Me</h1>
             <div className={styles.titleLine} />
-            <p className={styles.desc}>
-              I'm a passionate web developer with experience in building
-              modern web applications using JavaScript, React, Vue.js,Php,CodeIgniter, MySQL, and more. I enjoy creating user-friendly interfaces and writing clean, efficient code. My goal is to continuously learn and improve my skills to deliver high-quality solutions.
-              and more.
-            </p>
-            <p className={styles.desc}>
-              I love turning complex problems into simple, beautiful and
-              intuitive solutions.
-            </p>
-            <p className={styles.desc}>
-              When I'm not coding, you can find me learning something
-              new, exploring UI/UX design, or enjoying a good cup of coffee.
-            </p>
-          </div>
+              <p className={styles.desc}>
+                I'm a passionate web developer with experience in building
+                modern web applications using JavaScript, React, Vue.js,Php,CodeIgniter, MySQL, and more. I enjoy creating user-friendly interfaces and writing clean, efficient code. My goal is to continuously learn and improve my skills to deliver high-quality solutions.
+                and more.
+              </p>
+              <p className={styles.desc}>
+                I love turning complex problems into simple, beautiful and
+                intuitive solutions.
+              </p>
+              <p className={styles.desc}>
+                When I'm not coding, you can find me learning something
+                new, exploring UI/UX design, or enjoying a good cup of coffee.
+              </p>
+            </div>
           <div className={styles.photoSide}>
             {/* <img
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop&crop=face"
