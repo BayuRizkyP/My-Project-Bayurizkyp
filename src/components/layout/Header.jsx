@@ -43,7 +43,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <NavLink to="/contact" className={styles.cta}>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `${styles.cta} ${isActive ? styles.active : ''}`
+          }
+        >
           Let's Talk
         </NavLink>
 
