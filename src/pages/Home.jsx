@@ -91,7 +91,7 @@ export default function Home() {
 
           <a
             href="/cv.pdf"
-            download="Resume_Bayu_Rizky_Prayinusa.pdf"
+            download="Resume_Bayu_RizkyP.pdf"
             className={styles.btnSecondary}
           >
             Download CV
